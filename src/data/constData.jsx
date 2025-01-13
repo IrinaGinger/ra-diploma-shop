@@ -1,14 +1,14 @@
 export const menuItemsHeader = [
-    { id: "home", label: "Главная", link: "/" },
-    { id: "catalog", label: "Каталог", link: "/catalog" },
-    { id: "about", label: "О магазине", link: "/about" },
-    { id: "contacts", label: "Контакты", link: "/contacts" },
+    { id: "home", title: "Главная", link: "/" },
+    { id: "catalog", title: "Каталог", link: "/catalog" },
+    { id: "about", title: "О магазине", link: "/about" },
+    { id: "contacts", title: "Контакты", link: "/contacts" },
 ];
 
 export const menuItemsFooter = [
-    { id: "about", label: "О магазине", link: "/about" },
-    { id: "catalog", label: "Каталог", link: "/catalog" },
-    { id: "contacts", label: "Контакты", link: "/contacts" },
+    { id: "about", title: "О магазине", link: "/about" },
+    { id: "catalog", title: "Каталог", link: "/catalog" },
+    { id: "contacts", title: "Контакты", link: "/contacts" },
 ];
 
 export const classPaySystems = [
@@ -35,3 +35,20 @@ export const emailLink = "mailto:" + contacts.email;
 
 export const copyrightText = "2009-2019 © BosaNoga.ru — модный интернет-магазин обуви и аксессуаров.  Все права защищены. Доставка по всей России!";
 export const scheduleText = "Ежедневно: с 09-00 до 21-00";
+
+export const formOrderInputs = [
+    {
+        id: 1,
+        htmlFor: "phone",
+        text: "Телефон",
+        inputId: "phone",
+        placeholder: "Ваш телефон",        
+    },
+    {
+        id: 2,
+        htmlFor: "address",
+        text: "Адрес доставки",
+        inputId: "address",
+        placeholder: "Адрес доставки",
+    },
+];

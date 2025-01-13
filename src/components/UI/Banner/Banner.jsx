@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 
 import './Banner.css';
 
+// статичный баннер
 export function Banner(props) {
     const { src, text } = props;
 

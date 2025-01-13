@@ -1,27 +1,11 @@
-
-/* Bootstrap */
 .nav-link {
   text-decoration: none;
   color: #727e86;
-  font-size: 16px;
-}
-
-.nav-link.active {
-  color: #ff0000;
+  font-size: 18px;
 }
 
 h2,
 .h2 {
   margin-bottom: 1.5em;
   margin-top: 2em;
-}
-
-.btn-outline-primary {
-  color: #727e86;
-  border-color: #727e86;
-}
-
-.btn-outline-primary:hover {
-  background-color: #727e86;
-  border-color: #727e86;
 }

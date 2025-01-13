@@ -1,23 +1,22 @@
-// import { useState } from 'react';
 import {
   Route,
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
+  Navigate,
 } from "react-router-dom";
-
-import { Home } from "./pages/Home/Home";
-import { Catalog } from "./pages/Catalog/Catalog";
-// import { CatalogItem } from "./pages/CatalogItem/CatalogItem";
-import { StaticPage } from "./pages/StaticPage/StaticPage";
-// import { Cart } from "./pages/Cart/Cart";
 
 import { Layout } from "./components/Layout/Layout";
 
-import { About } from "./data/about";
-import { Contacts } from "./data/contacts";
-import { NotFound } from "./data/notfound";
+import { Home } from "./pages/Home/Home";
+import { Catalog } from "./pages/Catalog/Catalog";
+import { Product } from "./pages/Product/Product";
+import { Cart } from "./pages/Cart/Cart";
 
+import { StaticPage } from "./pages/StaticPage/StaticPage";
+import { About } from "./pages/StaticPage/About";
+import { Contacts } from "./pages/StaticPage/Contacts";
+import { NotFound } from "./pages/StaticPage/Notfound";
 
 import './App.css';
 
@@ -27,16 +26,17 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
-        {/* <Route path="/catalog/:id" element={<CatalogItem />} /> */}
-        <Route path="/about" element={<StaticPage header="О магазине"><About /></StaticPage>} />        
-        <Route path="/contacts" element={<StaticPage header="Контакты"><Contacts /></StaticPage>} />        
-        <Route path="*" element={<StaticPage header="Страница не найдена"><NotFound /></StaticPage>} />
-        {/* <Route path="/cart" element={<Cart />} /> */}
+        <Route path="/catalog/:id" element={<Product />} />
+        <Route path="/about" element={<StaticPage header="О магазине"><About /></StaticPage>} />
+        <Route path="/contacts" element={<StaticPage header="Контакты"><Contacts /></StaticPage>} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<Navigate to="/404" />} />
+        <Route path="/404" element={<StaticPage header="Страница не найдена"><NotFound /></StaticPage>} />
       </Route>
     )
   );
 
-  return (    
+  return (
     <RouterProvider router={routes} />
   )
 }

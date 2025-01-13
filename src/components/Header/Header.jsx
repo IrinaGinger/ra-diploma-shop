@@ -1,8 +1,8 @@
-import { Logo } from "../Logo/Logo";
-import { MenuHeader } from "../MenuHeader/MenuHeader";
-import { Controls } from "../Controls/Controls";
+import { Logo } from "../UI/Logo/Logo";
+import { MenuHeader } from "../Blocks/MenuHeader/MenuHeader";
+import { Controls } from "../Blocks/Controls/Controls";
 
-import { menuItemsHeader } from "../../data/data";
+import { menuItemsHeader } from "../../data/constData";
 
 import "./Header.css";
 

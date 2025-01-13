@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-import { Banner } from '../Banner/Banner';
+import { Banner } from '../UI/Banner/Banner';
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 
@@ -8,6 +8,7 @@ import bannerImg from '../../img/banner.jpg';
 
 import "./Layout.css";
 
+// базовая разметка страницы
 export function Layout() {
   const bannerTxt = 'К весне готовы!';
 

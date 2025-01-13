@@ -1,3 +1,7 @@
+.nav-link.active {
+    color: #ff0000;
+}
+
 .catalog {
     min-height: 600px;
 }
@@ -5,10 +9,6 @@
 .catalog-categories {
     font-size: 1.3rem;
     margin-bottom: 2em;
-}
-
-.catalog-item-card {
-    margin-bottom: 1em;
 }
 
 .catalog-item-size {

@@ -1,23 +1,28 @@
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
-import { Menu } from "../Menu/Menu"; 
-import { EmptyDiv } from "../EmptyDiv/EmptyDiv";
+import { Menu } from "../Blocks/Menu/Menu";
+import { EmptyDiv } from "../UI/EmptyDiv/EmptyDiv";
 
-import { menuItemsFooter, 
-         classPaySystems,  
-         classSociaLinks,
-         copyrightText,
-         telLink,
-         emailLink,
-         contacts,
-         scheduleText
-} from "../../data/data";
+import {
+    menuItemsFooter,
+    classPaySystems,
+    classSociaLinks,
+    copyrightText,
+    telLink,
+    emailLink,
+    contacts,
+    scheduleText
+} from "../../data/constData";
 
 import "./Footer.css";
 
 // подвал интернет-страницы
 // содержит логотип, строку меню и управляющие кнопки (поиск и значок корзины)
-export function Footer() {    
+export function Footer() {
+    const location = useLocation();
+    const activePage = location.pathname;
+
     const classMenu = "nav flex-column";
 
     return (
@@ -26,7 +31,7 @@ export function Footer() {
                 <div className="col">
                     <section>
                         <h5>Информация</h5>
-                        <Menu classMenu={classMenu} menuItems={menuItemsFooter} />
+                        <Menu typeMenu="menu" classMenu={classMenu} menuItems={menuItemsFooter} activePage={activePage} />
                     </section>
                 </div>
                 <div className="col">
